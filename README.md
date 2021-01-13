@@ -1,6 +1,3 @@
-# gitmysql
-# https://hub.docker.com/r/arelis/gitdb
-
 #GitDB
 ---
 
@@ -64,6 +61,12 @@ Se realizan cambios en DB |
  * docker ps
  * Copia el id de la imagen docker
  * Ejecuta: docker cp [Directorio_destino/]db.sqlite3 [ID Docker]:/cv_db/src/
+<br>
+
+* Datos persistentes (Directorio de trabajo Git/Respaldos) se guardan en Host /gitdb_data
+ * docker run -p 127.0.0.1:8080:8889 --name Gitdb  -v /Volumes/UnidadP/gitdb_data:/cv_db/src/gitdbwrkdir arelis/gitdb:0.9.5
+ * Configurar en _>Configuracion de Servidor : ./gitdbwrkdir/
+ * Configurar en _>Directorio de trabajo Git:  ./gitdbwrkdir/gitdb/
 
 #### Para comentarios, sugerencias y agradecimientos ;) <br>
 
